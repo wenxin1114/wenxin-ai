@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gpt
+    username: root
+    password: wenxin
+  mail:
+    host: smtp.163.com
+    port: 465
+    protocol: smtps
+    username: wenxin_web@163.com
+    password: YCOUPMDBKDTQRAJR
+    default-encoding: UTF-8
+
+  data:
+    redis:
+      # 连接地址
+      host: 172.26.241.155
+      # 端口
+      port: 6379
+      # 数据库
+      database: 0
+      # 连接超时
+      connect-timeout: 5s
+      # 读超时
+      timeout: 5s
+      # Lettuce 客户端的配置
+      lettuce:
+        # 连接池配置
+        pool:
+          # 最小空闲连接
+          min-idle: 0
+          # 最大空闲连接
+          max-idle: 8
+          # 最大活跃连接
+          max-active: 8
+          # 从连接池获取连接 最大超时时间，小于等于0则表示不会超时
+          max-wait: -1ms
+server:
+  servlet:
+    context-path: /api
+model:
+  spark:
+    # version 1.1 2.1 3.1 3.5
+    hostUrl: https://spark-api.xf-yun.com/v1.1/chat
+    appid: d6308de5
+    apiSecret: NjRhODk5NzMyYzViMDhjYWY0ODE2MTc5
+    apiKey: b2bd54be3731fbb76e363e9ba6aeefbf
+base-url: http://localhost:8080
+#base-url: https://4c0a6b68.r19.cpolar.top
