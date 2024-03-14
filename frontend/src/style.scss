@@ -1,0 +1,72 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 左边出现 */
+.animation-moveFromLeft {
+    animation: moveFromLeft .6s forwards;
+}
+
+@keyframes moveFromLeft {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+        /* 最终位置为屏幕中间 */
+    }
+}
+
+
+/* 淡入 */
+.animation-fadeIn {
+    opacity: 0;
+    /* 初始透明度为 0（完全透明） */
+    animation: fadeIn .6s forwards;
+    /* 使用 CSS 动画 */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        /* 开始时完全透明 */
+    }
+
+    100% {
+        opacity: 1;
+        /* 结束时完全不透明 */
+    }
+}
+
+/* 淡出 */
+.animation-fadeOut {
+    opacity: 1;
+    /* 初始透明度为 1（完全不透明） */
+    animation: fadeOut .6s forwards;
+    /* 使用 CSS 动画 */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        /* 开始时完全不透明 */
+    }
+
+    100% {
+        opacity: 0;
+        /* 结束时完全透明 */
+    }
+}
+
+.github-markdown-body {
+    padding: 0;
+    p {
+        margin-bottom: 0;
+    }
+}
